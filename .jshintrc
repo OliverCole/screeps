@@ -137,7 +137,8 @@
     "OBSTACLE_OBJECT_TYPES": false,
     "CARRY_CAPACITY": false,
     "HARVEST_POWER": false,
-    "LOOK_RESOURCES": false
+    "LOOK_RESOURCES": false,
+    "TOUGH": false
   },
   "node": true
 }

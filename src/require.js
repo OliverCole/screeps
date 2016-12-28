@@ -61,3 +61,4 @@ require('role_storagefiller');
 require('role_structurer');
 require('role_towerfiller');
 require('role_upgrader');
+require('prototype_creep_squad');
