@@ -26,7 +26,7 @@ roles.upgrader.settings = {
     7: {
       0: 1,
       50000: 20,
-      800000: undefined,
+      800000: undefined
     },
     8: {
       0: 1,
