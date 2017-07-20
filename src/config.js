@@ -198,6 +198,11 @@ global.config = {
     storageMinEnergyAmount: 20000
   },
 
+  terminal: {
+    energyAmount: 100000,
+    storageMinEnergyAmount: 20000
+  },
+
   mineral: {
     enabled: true,
     storage: 100000,
