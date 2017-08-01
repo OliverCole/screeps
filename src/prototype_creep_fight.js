@@ -171,6 +171,16 @@ Creep.prototype.fightRampart = function(target) {
   if (range > 3) {
     return false;
   }
+
+  const targets = this.pos.findInRange(FIND_HOSTILE_CREEPS, 3, {
+    filter: this.room.findAttackCreeps
+  });
+  if (targets.length > 1) {
+    this.rangedMassAttack();
+  } else {
+    this.rangedAttack(target);
+  }
+
   const returnCode = this.moveToMy(rampart.pos, 0);
   if (returnCode === OK) {
     return true;
@@ -181,14 +191,6 @@ Creep.prototype.fightRampart = function(target) {
 
   this.log('creep_fight.fightRampart returnCode: ' + returnCode);
 
-  const targets = this.pos.findInRange(FIND_HOSTILE_CREEPS, 3, {
-    filter: this.room.findAttackCreeps
-  });
-  if (targets.length > 1) {
-    this.rangedMassAttack();
-  } else {
-    this.rangedAttack(target);
-  }
   return true;
 };
 
