@@ -78,8 +78,9 @@ Room.prototype.handleTower = function() {
   if (towers.length === 0) {
     return false;
   }
+
   const hostileCreeps = this.find(FIND_HOSTILE_CREEPS);
-  if (hostileCreeps.length > 0) {
+  if (hostileCreeps.length > 0) { // && this.memory.attackTimer < 100) {
     let tower;
     let hostileOffset = {};
     let sortHostiles = function(object) {
